@@ -1,25 +1,56 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { MarkSix } from './components/MarkSix';
+import { MarkSeven } from './components/MarkSeven';
+import MarkEight from './components/MarkEight';
+import MarkNine from './components/MarkNine';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+
+
+
+
+      <div className="App">
+
+
+        <nav>
+          <ul>
+            <li><a href="https://replit.com/@vipansh/TestYour-Knowledge"target="_blank">Mark One(A CLI Quiz app)</a></li>
+            <li><a href="https://replit.com/join/ahkupvwk-vipansh"target="_blank">Mark Two (A CLI Quiz app)</a></li>
+            <li><Link to="/">Mark three(Your first website)</Link></li>
+            <li><a href="https://vipansh.vercel.app/" target="_blank">Mark Four(My portfolio)</a></li>
+            <li><a href="https://jsblog.vercel.app/ " target="_blank">Mark five(Blogs)</a></li>
+            <li> <Link to="/markSix">MarkSix</Link> </li>
+            <li> <Link to="/markSeven">MarkSeven</Link> </li>
+            <li> <Link to="/markEight">MarkEight</Link> </li>
+            <li> <Link to="/markNine">MarkNine</Link> </li>
+
+          </ul>
+        </nav>
+
+        <Switch>
+          {/* <Route path="/markfive" /> */}
+          <Route path="/markSix" exect component={MarkSix} />
+          <Route path="/markSeven" exect component={MarkSeven} />
+          <Route path="/markEight" exect component={MarkEight} />
+          <Route path="/markNine" exect component={MarkNine} />
+        </Switch>
+      </div>
+    </Router>
+
+
   );
 }
 
 export default App;
+
+// https://replit.com/@vipansh/TestYour-Knowledge 
+// https://replit.com/join/ahkupvwk-vipansh
