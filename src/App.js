@@ -10,6 +10,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { AllProjectPage } from './components/AllProjectPage';
 function App() {
   return (
     <Router>
@@ -23,8 +24,10 @@ function App() {
 
         <nav>
           <ul>
-            <li><a href="https://replit.com/@vipansh/TestYour-Knowledge"target="_blank">Mark One(A CLI Quiz app)</a></li>
-            <li><a href="https://replit.com/join/ahkupvwk-vipansh"target="_blank">Mark Two (A CLI Quiz app)</a></li>
+          <li><Link to="/">Back TO Home</Link></li>
+
+            <li><a href="https://replit.com/@vipansh/TestYour-Knowledge" target="_blank">Mark One(A CLI Quiz app)</a></li>
+            <li><a href="https://replit.com/join/ahkupvwk-vipansh" target="_blank">Mark Two (A CLI Quiz app)</a></li>
             <li><Link to="/">Mark three(Your first website)</Link></li>
             <li><a href="https://vipansh.vercel.app/" target="_blank">Mark Four(My portfolio)</a></li>
             <li><a href="https://jsblog.vercel.app/ " target="_blank">Mark five(Blogs)</a></li>
@@ -38,6 +41,7 @@ function App() {
 
         <Switch>
           {/* <Route path="/markfive" /> */}
+          <Route path ="/" exact component={AllProjectPage}/>
           <Route path="/markSix" exect component={MarkSix} />
           <Route path="/markSeven" exect component={MarkSeven} />
           <Route path="/markEight" exect component={MarkEight} />
